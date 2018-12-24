@@ -16,7 +16,7 @@ public class ImplClass extends Abstracting{
 	@Override
 	void chec() {
 		// TODO Auto-generated method stub
-		
+		System.out.println("Pushed Checking");
 	}
 
 }
