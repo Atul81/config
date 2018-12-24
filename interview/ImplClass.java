@@ -13,4 +13,10 @@ public class ImplClass extends Abstracting{
 		abstracting.func();
 	}
 
+	@Override
+	void chec() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

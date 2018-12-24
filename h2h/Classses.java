@@ -19,7 +19,7 @@ import hronlinr.SingletonExample;
 public class Classses extends Parent {
 	public static List<String> ranks = new LinkedList<>();
 	static {
-		ranks.add(e)
+		ranks.add("Atul");
 	}
 
 	public static void main(String... a) {
@@ -38,10 +38,8 @@ public class Classses extends Parent {
 		Map<String, String> map3 = new ConcurrentHashMap<>();
 		BlockingQueue<String> map4 = new LinkedBlockingQueue<>();
 		Map<String, String> synchronizedMap = Collections.synchronizedMap(map1);
-		Stack<Integer> stack  = new Stack<>();
+		Stack<Integer> stack = new Stack<>();
 		PriorityQueue<String> pq = new PriorityQueue<>();
-		map4.o;
-		pq.off
 	}
 
 	static Classses funb() {
