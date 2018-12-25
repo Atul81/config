@@ -4,24 +4,25 @@ public class Type3 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		staticOuter.Inner inner = new staticOuter.Inner();
+		staticOute1r.Inner inner = new staticOute1r.Inner();
 		inner.func();
-		staticOuter.Inner.staticFun();
-		System.out.println(staticOuter.Inner.c);
+		staticOute1r.Inner.staticFun();
+		System.out.println(staticOute1r.Inner.c);
 		inner.func();
 	}
 
 }
 
-class staticOuter{
+class staticOute1r {
 	static class Inner {
-		
-		static int c =6;
+
+		static int c = 6;
+
 		void func() {
 			System.out.println("Hello");
 			System.out.println(c);
 		}
-		
+
 		static void staticFun() {
 			System.out.println("static Hello");
 		}

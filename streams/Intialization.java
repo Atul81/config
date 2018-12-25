@@ -2,6 +2,7 @@ package streams;
 
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.stream.Collectors;
@@ -34,7 +35,10 @@ public class Intialization {
 				return o1.getEmpSalary().compareTo(o2.getEmpSalary());
 			}
 		};
-
+		
+		/*
+		 * for same Keyvalues, Using Binary Operator Merge Function
+		 */
 		Map<Integer, String> collect = stream.sorted(comparator)
 				.collect(Collectors.toMap(Employee::getEmpId, Employee::getEmpName, (x, y) -> {
 					System.out.println(x + "   " + y);
@@ -63,11 +67,13 @@ public class Intialization {
 				// TODO Auto-generated method stub
 				return arg0.getEmpName().compareTo(arg1.getEmpName());
 			}
-
-		}).collect(Collectors.toMap(Employee::getEmpId, Employee::getEmpName));
+			/*
+			 * for returning LinkedHashMap, Binary function is required
+			 */
+		}).collect(Collectors.toMap(Employee::getEmpId, Employee::getEmpName, (x, y) -> x+", "+ y, LinkedHashMap::new));
 
 		/*
-		 * After Collector processing
+		 * After Collector processing 
 		 */
 		collect2.entrySet().stream().sorted(new Comparator<Map.Entry<Integer, String>>() {
 
